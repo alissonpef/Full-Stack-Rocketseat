@@ -8,8 +8,8 @@ app.use(express.json());
 // app.use(myMiddleware); Middleware Global
 
 app.get("/products/:id", (req, res) => {
-  const { id } = req.params;
-  const { page, limit } = req.query;
+  const { id } = req.params; // URL
+  const { page, limit } = req.query; // ?...
 
   res.send(`Produto ${id}, página ${page} de ${limit}`);
 });
